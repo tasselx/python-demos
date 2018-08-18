@@ -16,7 +16,7 @@ def make_tiny(url):
     request_url = ('http://tinyurl.com/api-create.php?'+urlencode({'url':url}))
     with contextlib.closing(urlopen(request_url)) as res:
         return res.read().decode('utf-8')
-    print 1
+
 def main():
     urls = sys.argv[1:]
     for url in urls:
